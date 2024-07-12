@@ -9,7 +9,20 @@ Accounts table has One-to-Many relationship with Transactions Table. Same like A
 > __IMPORTANT!!!__ <br>
 > identifier (id) in Customers, Addresses, Accounts and Transactions using UUID as identifier. PostgreSQL database uses UUID generator function to generate unique identifier.
 
+
+[Migrations](./migration/)
+```javascript
+├── migration // for creating table (DDL)
+├── operation // for manipulating data (DML)
+│   ├── Crete
+│   ├── Delete
+│   ├── Read
+│   ├── Update
+├── database-migration.sql // for creating database
+├── ERD.png // docs of Entity Relational Diagram
+└── readme.md // documentation file
+```
 $~$
 
 ## Entity Relational Diagram (ERD)
-![ERD for this project](ERD.png)
+![ERD for this project](./ERD.png)
