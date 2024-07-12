@@ -1,0 +1,1 @@
+DELETE FROM accounts WHERE id = 'c18d80e5-9f7c-4cb8-a783-b660f6ee5760'

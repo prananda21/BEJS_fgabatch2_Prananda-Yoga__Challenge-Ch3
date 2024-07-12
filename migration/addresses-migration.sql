@@ -1,7 +1,7 @@
 CREATE TABLE address_type (
   id VARCHAR(255) NOT NULL PRIMARY KEY,
   description VARCHAR(255) NOT NULL
-)
+);
 
 CREATE TABLE addresses (
   id uuid NOT NULL PRIMARY KEY,
@@ -12,9 +12,9 @@ CREATE TABLE addresses (
   province VARCHAR(255) NOT NULL,
   country VARCHAR(255) NOT NULL,
   postal_code VARCHAR(10) NOT NULL,
-  address_type VARCHAR(255) UNIQUE,
+  address_type VARCHAR(255) NOT NULL,
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (customer_id) REFERENCES customers (id),
   FOREIGN KEY (address_type) REFERENCES address_type (id)
-)
+);
